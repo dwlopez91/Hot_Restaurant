@@ -1,4 +1,8 @@
-module.exports = function (app) {}
+module.exports = function (app) {
+    app.get("/reserve", function (req, res) {
+        res.json(reservations);
+    });
+}
 
 
 //GET TABLE
@@ -25,7 +29,3 @@ var reservations = [{
         unique: 1350
     }
 ];
-
-app.get("/reserve", function (req, res) {
-    res.json(reservations);
-});
